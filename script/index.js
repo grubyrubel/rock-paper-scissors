@@ -160,7 +160,7 @@ function game(){
 
     }, 3300);
 
-    if(playerScore + computerScore==5){
+    if(playerScore==3 || computerScore==3){
         
         setTimeout(() => {
             document.getElementById('navigation').style.visibility="hidden";
