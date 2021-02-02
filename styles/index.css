@@ -1,0 +1,177 @@
+html{
+    background-color: black;
+}
+
+body{
+    display: flex;
+    margin: 0 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+#outside{
+    display: flex;
+    height: 80vh;
+    width: 80vw;
+    border: 0.8vmin solid lawngreen;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5vmin;
+    
+}
+
+.play{
+    padding: 1vmin 3vmin; 
+    color:lawngreen;
+    font-size: 8vmin;
+    border: 0.6vmin solid lawngreen;
+    border-radius: 50px;
+    cursor: pointer;
+    
+
+}
+
+.play1{
+    padding: 1vmin 3vmin; 
+    color:lawngreen;
+    font-size: 8vmin;
+    border: 0.6vmin solid lawngreen;
+    border-radius: 50px;
+    cursor: pointer;
+    animation-name: play;
+    animation-duration: 2s;
+    animation-timing-function:linear;
+    animation-fill-mode: forwards;
+    box-shadow: 0 0 20px lawngreen;
+}
+
+@keyframes play{
+    0%{font-size: 8vmin;}
+    100%{font-size: 0;border: none; box-shadow: none;}
+}
+
+.play:hover{
+    box-shadow: 0 0 4vmin lawngreen;
+}
+
+.game-none{
+    display:none;
+}
+
+.game{
+    padding-top:5vh;
+    padding-left:5vw;
+    padding-right: 5vw;
+    width: 100%;
+}
+
+.end{
+    color:lawngreen;
+    font-size: 8vmin;
+}
+
+.endA{
+    color:lawngreen;
+    font-size: 8vmin;
+    animation-name: endAnimation;
+    animation-duration: 2s;
+    animation-timing-function:linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes endAnimation{
+    0%{}
+    100%{color:black;}
+}
+
+.end-non{
+    display:none;
+}
+
+#navigation{
+    display: flex;
+    margin-left:-1vw;
+}
+
+.navButton{
+    display: flex;
+    font-size: 3vh;
+    color: lawngreen;
+    border: 0.4vmin solid lawngreen;
+    border-radius: 1.4vmin;
+    padding: 0.5vh 0.8vh;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    cursor: pointer;
+}
+
+@media(min-height: 600px){
+.navButton:hover{
+    box-shadow: 0 0 3vmin lawngreen;
+}
+}
+
+#playerVScomputer{
+    display: flex;
+    width:100%;
+    
+    align-items: center;
+    
+}
+
+@media (min-aspect-ratio: 8/5){
+.img{
+    width: 46vh;
+    height: 46vh;
+    border-radius: 15px;  
+}
+}
+
+@media (max-aspect-ratio: 3/2){
+    .img{
+        width: 20vw;
+        height: 20vw;
+        border-radius: 15px;  
+    }
+    }
+
+.rps{
+    margin-top:5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    border-radius: 2vmin;
+    border: 0.6vmin solid lawngreen;
+}
+
+.rps-non{
+    display: none;
+}
+
+#player{
+    display: flex;
+    margin-right: auto;
+    
+}
+
+#computer{
+    display: flex;
+    margin-left: auto;
+    
+}
+
+#text{
+    display: flex;
+    color:lawngreen;
+    font-size: 6vh;
+    justify-content: center;
+}
+
+#result{
+    color:lawngreen;
+    font-size: 10vw;
+}
+
+
