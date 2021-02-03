@@ -18,6 +18,11 @@ document.getElementById('play').onanimationend=function(){
     document.getElementById('outside').style.justifyContent="flex-start";
     document.getElementById('outside').style.alignItems="flex-start";
     document.getElementById('result').textContent="0:0";
+    document.getElementById('qm').className="rps";
+    document.getElementById('rockC').className="rps-non";
+    document.getElementById('paperC').className="rps-non";
+    document.getElementById('scissorsC').className="rps-non";
+
     
 }
 
@@ -72,12 +77,15 @@ function game(){
     for(let i=1; i<20;i++){
     setTimeout(() => {
         if(document.getElementById('rockC').className==="rps"){
+            document.getElementById('qm').className="rps-non";
             document.getElementById('rockC').className="rps-non";
             document.getElementById('paperC').className="rps";
         } else if(document.getElementById('paperC').className==="rps"){
+            document.getElementById('qm').className="rps-non";
             document.getElementById('paperC').className="rps-non";
             document.getElementById('scissorsC').className="rps";
         } else{
+            document.getElementById('qm').className="rps-non";
             document.getElementById('scissorsC').className="rps-non";
             document.getElementById('rockC').className="rps";
         };
@@ -177,8 +185,7 @@ function game(){
 
         setTimeout(() => {
             document.getElementById('result').style.visibility="hidden";
-            playerScore=0;
-            computerScore=0;
+            
 
         }, 9000);
         
@@ -192,7 +199,8 @@ function game(){
             } else{
                 document.getElementById('end').textContent="GAME OVER - YOU LOSE!";
             };
-            
+            playerScore=0;
+            computerScore=0;
         }, 9000);
 
         setTimeout(() => {
