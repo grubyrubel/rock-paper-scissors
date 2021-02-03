@@ -22,6 +22,7 @@ document.getElementById('play').onanimationend=function(){
     document.getElementById('rockC').className="rps-non";
     document.getElementById('paperC').className="rps-non";
     document.getElementById('scissorsC').className="rps-non";
+    document.getElementById('text').textContent="Player vs Computer";
 
     
 }
