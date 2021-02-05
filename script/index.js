@@ -146,9 +146,14 @@ function game(){
         document.getElementById('scissorsC').style.boxShadow="";
         document.getElementById('paperC').style.boxShadow="";
         document.getElementById('rockC').style.boxShadow="";
-
-        document.getElementById('accept').onclick=game; 
-        document.getElementById('change').onclick=change;
+        if(playerScore==3 || computerScore==3){
+            document.getElementById('accept').onclick=""; 
+            document.getElementById('change').onclick="";
+        } else{
+            document.getElementById('accept').onclick=game; 
+            document.getElementById('change').onclick=change;
+        };
+        
 
     }, 5000);
     
@@ -173,6 +178,8 @@ function game(){
         
         setTimeout(() => {
             document.getElementById('navigation').style.visibility="hidden";
+            document.getElementById('accept').onclick=game; 
+            document.getElementById('change').onclick=change;
         }, 6000);
 
         setTimeout(() => {
